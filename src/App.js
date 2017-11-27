@@ -21,7 +21,7 @@ const App = ({successLogin, user, selectedSection, products}) => {
           <Route exact path="/logIn" render={() => <LogIn successLogin={successLogin}/>}/>
           <Route exact path="/signUp" render={() => <SignUp successLogin={successLogin}/>}/>
           <Route exact path="/sale" render={() => <Sale selectedSection={selectedSection} products={products}/>}/>
-          <Route exact path="/aution" render={() => <Aution />}/>
+          <Route exact path="/aution" render={() => <Aution products={products}/>}/>
           <Route exact path="/process" render={() => <Process />} />
           <Route render={() => <Redirect  to={'/home'} />}/>
         </Switch>
