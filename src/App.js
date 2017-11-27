@@ -9,7 +9,7 @@ import Sale from './components/Sale';
 import Aution from './components/Aution';
 import {connect} from 'redux-zero/react';
 
-const App = ({}) => {
+const App = ({successLogin}) => {
   return (
     <BrowserRouter>
       <div>
@@ -27,5 +27,5 @@ const App = ({}) => {
   )
 }
 
-const mapToProps=({})=>({})
+const mapToProps=({successLogin})=>({successLogin})
 export default connect(mapToProps)(App)
