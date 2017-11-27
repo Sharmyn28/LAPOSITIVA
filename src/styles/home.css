@@ -5,3 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#navbar-inverse {
+    background-color: #98B296!important;
+    border-color: #98B296!important;
+}

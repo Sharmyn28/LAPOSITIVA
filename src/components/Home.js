@@ -9,7 +9,7 @@ import { signOut } from "../actions/actions";
 
 export const Menu = ({ successLogin, user }) => {
     return (
-        <Navbar inverse collapseOnSelect>
+        <Navbar inverse collapseOnSelect id='navbar-inverse'>
             <Navbar.Header>
                 <Navbar.Brand>
                     <NavLink to='/home'> TAM </NavLink>
