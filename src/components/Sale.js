@@ -1,6 +1,6 @@
 import React from 'react';
 import {selectSectionAction} from '../actions/actions';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Thumbnail} from 'react-bootstrap';
 
 const Bar = ({onCollapseClick}) => {
     return(
@@ -50,11 +50,12 @@ const Out = ({ selectedSection, products }) => (
     >
        <div className="card card-body py-5">
           {
+              /*className='product-img'*/
               products.interno.map((product, index) => {
                 return (
                     <Row key={index}>
                         <Col md={2} xs={4} lg={2} >
-                            <img className='product-img' src={product.img} />
+                            <Thumbnail alt="171x180" src={product.img} />
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
@@ -65,7 +66,7 @@ const Out = ({ selectedSection, products }) => (
                         <Col md={5} xs={4} lg={5} >
                             <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
                             <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
-                            <button>Comprar</button>
+                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar</i></button>
                         </Col>
                     </Row>
                 )
@@ -86,7 +87,7 @@ const Out = ({ selectedSection, products }) => (
                 return (
                     <Row key={index}>
                         <Col md={2} xs={4} lg={2} >
-                            <img className='product-img' src={product.img} />
+                            <Thumbnail alt="171x180" src={product.img} />
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
@@ -97,7 +98,7 @@ const Out = ({ selectedSection, products }) => (
                         <Col md={5} xs={4} lg={5} >
                             <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
                             <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
-                            <button>Comprar</button>
+                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar</i></button>
                         </Col>
                     </Row>
                 )
@@ -118,7 +119,7 @@ const Out = ({ selectedSection, products }) => (
                 return (
                     <Row key={index}>
                         <Col md={2} xs={4} lg={2} >
-                            <img className='product-img' src={product.img} />
+                            <Thumbnail alt="171x180" src={product.img} />
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
@@ -129,7 +130,7 @@ const Out = ({ selectedSection, products }) => (
                         <Col md={5} xs={4} lg={5} >
                             <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
                             <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
-                            <button>Comprar</button>
+                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar</i></button>
                         </Col>
                     </Row>
                 )
@@ -150,7 +151,7 @@ const Out = ({ selectedSection, products }) => (
                 return (
                     <Row key={index}>
                         <Col md={2} xs={4} lg={2} >
-                            <img className='product-img' src={product.img} />
+                            <Thumbnail alt="171x180" src={product.img} />
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
@@ -161,7 +162,7 @@ const Out = ({ selectedSection, products }) => (
                         <Col md={5} xs={4} lg={5} >
                             <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
                             <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
-                            <button>Comprar</button>
+                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar</i></button>
                         </Col>
                     </Row>
                 )

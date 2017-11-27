@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Thumbnail } from 'react-bootstrap';
 import { addAution } from '../actions/actions'
 
 class Formul extends React.Component{
@@ -32,7 +32,7 @@ class Aution extends React.Component {
                             return (
                                 <Row key={index}>
                                     <Col md={2} xs={4} lg={2} >
-                                        <img className='product-img' src={product.img} />
+                                        <Thumbnail alt="171x180" src={product.img} />
                                     </Col>
                                     <Col md={5} xs={4} lg={5} >
                                         <h4>{product.articulo}</h4>
