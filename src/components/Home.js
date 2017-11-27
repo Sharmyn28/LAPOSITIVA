@@ -45,12 +45,12 @@ export const Menu = () => {
             </Navbar.Header>
             <Navbar.Collapse>
                 <Nav>
-                    <NavItem eventKey={1}><NavLink to='/sales'> Ventas </NavLink></NavItem>
-                    <NavItem eventKey={2}><NavLink to='/auction'> Subasta </NavLink></NavItem>
+                    <NavItem><NavLink to='/sale'> Ventas </NavLink></NavItem>
+                    <NavItem><NavLink to='/aution'> Subasta </NavLink></NavItem>
                 </Nav>
                 <Nav pullRight>
-                    <NavItem eventKey={1}><NavLink to='/logIn'>Log In</NavLink></NavItem>
-                    <NavItem eventKey={2}><NavLink to='/signUp'>Sign Up</NavLink></NavItem>
+                    <NavItem><NavLink to='/logIn'>Log In</NavLink></NavItem>
+                    <NavItem><NavLink to='/signUp'>Sign Up</NavLink></NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

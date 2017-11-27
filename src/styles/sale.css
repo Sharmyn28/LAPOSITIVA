@@ -1,38 +1,35 @@
 
-body .progress_inner #step-5:checked  + div + div + div + div > .box_ribbon, body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon, body .progress_inner #step-3:checked + input+ input + div + div + div + div > .box_ribbon {
+.progress_inner #step-5:checked  + div + div + div + div > .box_ribbon, body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon, body .progress_inner #step-3:checked + input+ input + div + div + div + div > .box_ribbon {
   top: 70%;
   left: 0px;
   opacity: 0;
 }
-body .progress_inner #step-5:checked  + div + div + div + div > .box_bow, body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow, body .progress_inner #step-3:checked + input+ input + div + div + div + div > .box_bow {
+.progress_inner #step-5:checked  + div + div + div + div > .box_bow, body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow, body .progress_inner #step-3:checked + input+ input + div + div + div + div > .box_bow {
   top: 0px;
   left: 0px;
   opacity: 0;
 }
-body .progress_inner #step-5:checked  + div + div + div + div > .box_ribbon, body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon {
+.progress_inner #step-5:checked  + div + div + div + div > .box_ribbon, body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon {
   top: 50%;
   left: 0px;
   opacity: 1;
 }
-body .progress_inner #step-5:checked  + div + div + div + div > .box_bow, body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow {
+.progress_inner #step-5:checked  + div + div + div + div > .box_bow, body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow {
   top: -10px;
   left: 0px;
   opacity: 1;
 }
-body .progress_inner #step-5:checked  + div + div + div + div > .box_tag {
+.progress_inner #step-5:checked  + div + div + div + div > .box_tag {
   top: 10px;
   left: 20px;
   opacity: 1;
 }
-body .progress_inner #step-5:checked  + div + div + div + div > .box_string {
+.progress_inner #step-5:checked  + div + div + div + div > .box_string {
   top: 10px;
   left: 20px;
   opacity: 1;
 }
-* {
-  box-sizing: border-box;
-}
-body .progress_inner__step:before, body .progress_inner, body .progress_inner__status .box_base, body .progress_inner__status .box_item, body .progress_inner__status .box_ribbon, body .progress_inner__status .box_bow, body .progress_inner__status .box_bow__left, body .progress_inner__status .box_bow__right, body .progress_inner__status .box_tag, body .progress_inner__status .box_string {
+.progress_inner__step:before, body .progress_inner, body .progress_inner__status .box_base, body .progress_inner__status .box_item, body .progress_inner__status .box_ribbon, body .progress_inner__status .box_bow, body .progress_inner__status .box_bow__left, body .progress_inner__status .box_bow__right, body .progress_inner__status .box_tag, body .progress_inner__status .box_string {
   position: absolute;
   left: 0;
   right: 0;
@@ -40,7 +37,7 @@ body .progress_inner__step:before, body .progress_inner, body .progress_inner__s
   transform: translateY(-50%);
   margin: auto;
 }
-body .progress_inner__bar, body .progress_inner__bar--set {
+.progress_inner__bar, body .progress_inner__bar--set {
   height: 6px;
   left: 10%;
   background: repeating-linear-gradient(45deg, #1ea4ec, #1ea4ec 4px, #1f8bc5 4px, #1f8bc5 10px);
@@ -50,7 +47,7 @@ body .progress_inner__bar, body .progress_inner__bar--set {
   position: relative;
   z-index: -1;
 }
-body .progress_inner__step:before {
+.progress_inner__step:before {
   width: 30px;
   height: 30px;
   color: #70afd0;
@@ -64,7 +61,7 @@ body .progress_inner__step:before {
   cursor: pointer;
   pointer-events: none;
 }
-body .progress_inner__step {
+.progress_inner__step {
   width: 20%;
   font-size: 14px;
   padding: 0 10px;
@@ -73,17 +70,17 @@ body .progress_inner__step {
   text-align: center;
   position: relative;
 }
-body .progress_inner__step label {
+.progress_inner__step label {
   padding-top: 50px;
   top: -20px;
   display: block;
   position: relative;
   cursor: pointer;
 }
-body .progress_inner__step:hover {
+.progress_inner__step:hover {
   color: white;
 }
-body .progress_inner__step:hover:before {
+.progress_inner__step:hover:before {
   color: white;
   background: #1ea4ec;
 }
@@ -94,24 +91,24 @@ body {
   text-align: center;
   font-weight: 900;
 }
-body .progress_inner {
+.progress_inner {
   height: 200px;
   width: 700px;
 }
-body .progress_inner #step-5:checked  + div {
+.progress_inner #step-5:checked  + div {
   width: 80%;
 }
-body .progress_inner #step-5:checked  + div + div + div > .tab:nth-of-type(5) {
+.progress_inner #step-5:checked  + div + div + div > .tab:nth-of-type(5) {
   opacity: 1;
   top: 0;
 }
-body .progress_inner #step-5:checked  + div + div + div + div {
+.progress_inner #step-5:checked  + div + div + div + div {
   right: - 30%;
 }
-body .progress_inner #step-4:checked + input + div {
+.progress_inner #step-4:checked + input + div {
   width: 60%;
 }
-body .progress_inner #step-4:checked + input + div + div + div > .tab:nth-of-type(4) {
+.progress_inner #step-4:checked + input + div + div + div > .tab:nth-of-type(4) {
   opacity: 1;
   top: 0;
 }
@@ -171,7 +168,7 @@ body .progress_inner__bar--set {
   z-index: -2;
 }
 body .progress_inner__tabs .tab {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 40px;
   text-align: center;
