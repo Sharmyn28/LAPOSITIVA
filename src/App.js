@@ -10,7 +10,7 @@ import Aution from './components/Aution';
 import {connect} from 'redux-zero/react';
 import { Menu } from "./components/Home";
 
-const App = ({successLogin, user}) => {
+const App = ({successLogin, user, selectedSection, products}) => {
   return (
     <BrowserRouter>
       <div>
@@ -19,7 +19,7 @@ const App = ({successLogin, user}) => {
           <Route exact path="/home" render={() => <Home />}/>
           <Route exact path="/logIn" render={() => <LogIn successLogin={successLogin}/>}/>
           <Route exact path="/signUp" render={() => <SignUp successLogin={successLogin}/>}/>
-          <Route exact path="/sale" render={() => <Sale />}/>
+          <Route exact path="/sale" render={() => <Sale selectedSection={selectedSection} products={products}/>}/>
           <Route exact path="/aution" render={() => <Aution />}/>
           <Route render={() => <Redirect  to={'/home'} />}/>
         </Switch>
@@ -29,5 +29,5 @@ const App = ({successLogin, user}) => {
   )
 }
 
-const mapToProps=({successLogin, user})=>({successLogin, user})
+const mapToProps=({successLogin, user, selectedSection, products})=>({successLogin, user, selectedSection, products})
 export default connect(mapToProps)(App)

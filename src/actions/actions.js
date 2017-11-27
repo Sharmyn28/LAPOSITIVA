@@ -70,3 +70,13 @@ auth.onAuthStateChanged(user => {
     // signOut();
 });
 
+export function selectSectionAction(label) {
+    console.log('label', label);
+    store.setState({
+       selectedSection: label
+    });
+    
+}
+
+ 
+

@@ -177,3 +177,18 @@
     text-align: right;
   }
   
+  .product-img{
+    width: 100%;
+    margin-bottom: 8%;
+  }
+
+  .port-item{
+    display: inline-block;
+    width: 25%;
+    padding: 20px 2px;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+  .port-item.active{
+    
+  }
