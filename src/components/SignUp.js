@@ -1,49 +1,48 @@
 import React from 'react';
-import './SignUp.css'
-const SignUp = ({successLogin}) => {
+import './SignUp.css';
+import { NavLink, Redirect } from 'react-router-dom';
+import {signUp} from '../actions/actions'
+
+const SignUp = ({ successLogin }) => {
+    console.log('successLogin', successLogin)
     return (
-        <div className='secction-signUp'>  
+        <div className='secction-signUp'>
+            {
+                successLogin && <Redirect to='/home' />
+            }
             <div className="form">
                 <ul className="tab-group">
                     <li className="tab active">
                         <a >Regístrate</a>
                     </li>
                     <li className="tab">
-                        <a>Inicia Sesión</a>
+                        <NavLink to='/logIn'>Inicia Sesión</NavLink>
                     </li>
                 </ul>
                 <div className="tab-content">
-                        <form>
-                            <div className="top-row">
-                                <div className="field-wrap">
-                                    <label>
-                                        Nombres<span className="req">*</span>
-                                    </label>
-                                    <input type="text" required autocomplete="off" ref={e => this.nameInputRef = e} />
-                                </div>
-                                <div className="field-wrap">
-                                    <label>
-                                        Apellidos<span className="req">*</span>
-                                    </label>
-                                    <input type="text"required autocomplete="off" ref={e => this.lastInputRef = e} />
-                                </div>
+                    <form onSubmit={(e) => {
+                        e.preventDefault;
+                        console.log('estsa en signUp')
+                        signUp(this.nameInputRef.value, this.lastInputRef.value, this.emailInputRef.value, this.passwordInputRef.value);
+                    }}>
+                        <div className="top-row">
+                            <div className="field-wrap">
+                                <input type="text" required autoComplete="off" ref={(e) => {this.nameInputRef = e}} placeholder='Nombres*'/>
                             </div>
                             <div className="field-wrap">
-                                <label>
-                                Dirección de correo electrónico<span className="req">*</span>
-                                </label>
-                                <input type="email"required autocomplete="off" ref={e => this.emailInputRef = e} /> 
+                                <input type="text" required autoComplete="off" ref={(e) => {this.lastInputRef = e}} placeholder='Apellidos*'/>
                             </div>
-                            <div className="field-wrap">
-                                <label>
-                                Contraseña<span className="req">*</span>
-                                </label>
-                                <input type="password"required autocomplete="off" ref={e => this.passwordInputRef = e} />
-                            </div>
-                            <button type="submit" className="button button-block">Regístrate</button>
-                        </form>
+                        </div>
+                        <div className="field-wrap">
+                            <input type="email" required autoComplete="off" ref={(e) => {this.emailInputRef = e}} placeholder='Correo Electrónico*' />
+                        </div>
+                        <div className="field-wrap">
+                            <input type="password" required autoComplete="off" ref={(e) => {this.passwordInputRef = e}} placeholder='Contraseña*'/>
+                        </div>
+                        <button type="submit" className="button button-block">Regístrate</button>
+                    </form>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }
