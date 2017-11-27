@@ -1,50 +1,87 @@
 import React from 'react';
 import '../styles/home.css';
-import { Grid, Navbar } from 'react-bootstrap';
-
+import { Grid, Col, Row, Navbar, Carousel, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div class="nav">
+        <Col lgOffset={9} lg={3} md={3} sm={3} xs={3} className="nav">
             <ul>
-                <li>
+                {/*<li>
                     <a class="logo" href="http://andytran.me">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/logo_(1).svg" />
                     </a>
                 </li>
                 <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <NavLink to="/sale"> Ventas</NavLink>
                 </li>
                 <li>
-                    <a href="#calendar">
-                        Calendar
-                            <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="menu">
-                        <li>
-                            <a href="#event_one">Event #1</a>
-                        </li>
-                        <li>
-                            <a href="#event_two">Event #2</a>
-                        </li>
-                        <li>
-                            <a href="#event_three">Event #3</a>
-                        </li>
-                    </ul>
+                    <NavLink to="/auction">Subasta</NavLink>
+                </li>*/}
+                <li>
+                    <NavLink to='/logIn'>Log In</NavLink>
                 </li>
                 <li>
-                    <a href="#resume">Resume</a>
+                    <NavLink to='/signUp'>Sign Up</NavLink>
                 </li>
+
                 <li>
-                    <a href="#blog">Blog</a>
-                </li>
-                <li>
-                    <a href="#contact">
-                        <div class="fa fa-envelope"></div>
-                    </a>
+                    <a><i className="fa fa-shopping-cart" aria-hidden="true"></i></a>
                 </li>
             </ul>
-        </div>
+        </Col>
+    )
+}
+
+
+export const Menu = () => {
+    return (
+        <Navbar inverse collapseOnSelect>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <a href="#">TAM</a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                    <NavItem><NavLink to='/sale'> Ventas </NavLink></NavItem>
+                    <NavItem><NavLink to='/aution'> Subasta </NavLink></NavItem>
+                </Nav>
+                <Nav pullRight>
+                    <NavItem><NavLink to='/logIn'>Log In</NavLink></NavItem>
+                    <NavItem><NavLink to='/signUp'>Sign Up</NavLink></NavItem>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    )
+}
+
+const Slide = () => {
+    return (
+        <Carousel>
+            <Carousel.Item>
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
+                <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
+                <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
+                <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     )
 }
 
@@ -52,7 +89,7 @@ const Home = () => {
     return (
         <Grid fluid>
             <Grid>
-                <Navbar />
+                <Slide />
             </Grid>
         </Grid>
     )
