@@ -1,5 +1,5 @@
 import store from '../store/store'
-import firebase, { auth, database } from './firebase';
+import { auth, database } from './firebase';
 
 export function signUp(name, last, email, password) {
     console.log('signUp', name, last, email, password);
@@ -13,15 +13,17 @@ export function signUp(name, last, email, password) {
 
             console.log('user info sign up', userInfo);
             store.setState({
+                successLogin: true,
                 user: {
                     id: user.uid,
                     email: userInfo.email,
                     name: userInfo.name,
                     last: userInfo.last,
-                    password: userInfo.password,
                     shoppingCard: []
                 }
-            })
+            });
+            console.log("signup", store.getState().successLogin);
+            console.log("signup", store.getState().user);
         })
     })
 }
@@ -58,7 +60,6 @@ auth.onAuthStateChanged(user => {
                     email: userInfo.email,
                     name: userInfo.name,
                     last: userInfo.last,
-                    password: userInfo.password,
                     shoppingCard: userInfo.shoppingCard
                 }
             });
@@ -66,5 +67,6 @@ auth.onAuthStateChanged(user => {
         });
 
     }
+    // signOut();
 });
 

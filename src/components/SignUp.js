@@ -21,7 +21,7 @@ const SignUp = ({ successLogin }) => {
                 </ul>
                 <div className="tab-content">
                     <form onSubmit={(e) => {
-                        e.preventDefault;
+                        e.preventDefault();
                         console.log('estsa en signUp')
                         signUp(this.nameInputRef.value, this.lastInputRef.value, this.emailInputRef.value, this.passwordInputRef.value);
                     }}>
