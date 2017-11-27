@@ -15,7 +15,7 @@ const App = ({successLogin, user, selectedSection, products}) => {
   return (
     <BrowserRouter>
       <div>
-        <Menu />
+        <Menu successLogin={successLogin} user={user}/>
         <Switch>
           <Route exact path="/home" render={() => <Home />}/>
           <Route exact path="/logIn" render={() => <LogIn successLogin={successLogin}/>}/>
