@@ -59,13 +59,13 @@ const Out = ({ selectedSection, products }) => (
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
-                            <p><b>Marca:</b>{product.marca}</p>
-                            <p><b>Modelo:</b>{product.modelo}</p>
-                            <p><b>Año:</b>{product.year}</p>
+                            <p><b>Marca: </b>{product.marca}</p>
+                            <p><b>Modelo: </b>{product.modelo}</p>
+                            <p><b>Año: </b>{product.year}</p>
                         </Col>
                         <Col md={5} xs={4} lg={5} >
-                            <p><b>Precio:</b>{product.precio_aseguradora}</p>
-                            <p><b>Precio del Mercado:</b>{product.precio_mercado}</p>
+                            <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
+                            <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
                             <button>Comprar</button>
                         </Col>
                     </Row>
@@ -91,13 +91,13 @@ const Out = ({ selectedSection, products }) => (
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
-                            <p><b>Marca:</b>{product.marca}</p>
-                            <p><b>Modelo:</b>{product.modelo}</p>
-                            <p><b>Año:</b>{product.year}</p>
+                            <p><b>Marca: </b>{product.marca}</p>
+                            <p><b>Modelo: </b>{product.modelo}</p>
+                            <p><b>Año: </b>{product.year}</p>
                         </Col>
                         <Col md={5} xs={4} lg={5} >
-                            <p><b>Precio:</b>{product.precio_aseguradora}</p>
-                            <p><b>Precio del Mercado:</b>{product.precio_mercado}</p>
+                            <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
+                            <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
                             <button>Comprar</button>
                         </Col>
                     </Row>
@@ -123,13 +123,13 @@ const Out = ({ selectedSection, products }) => (
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
-                            <p><b>Marca:</b>{product.marca}</p>
-                            <p><b>Modelo:</b>{product.modelo}</p>
-                            <p><b>Año:</b>{product.year}</p>
+                            <p><b>Marca: </b>{product.marca}</p>
+                            <p><b>Modelo: </b>{product.modelo}</p>
+                            <p><b>Año: </b>{product.year}</p>
                         </Col>
                         <Col md={5} xs={4} lg={5} >
-                            <p><b>Precio:</b>{product.precio_aseguradora}</p>
-                            <p><b>Precio del Mercado:</b>{product.precio_mercado}</p>
+                            <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
+                            <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
                             <button>Comprar</button>
                         </Col>
                     </Row>
@@ -155,13 +155,13 @@ const Out = ({ selectedSection, products }) => (
                         </Col>
                         <Col md={5} xs={4} lg={5} >
                             <h4>{product.articulo}</h4>
-                            <p><b>Marca:</b>{product.marca}</p>
-                            <p><b>Modelo:</b>{product.modelo}</p>
-                            <p><b>Año:</b>{product.year}</p>
+                            <p><b>Marca: </b>{product.marca}</p>
+                            <p><b>Modelo: </b>{product.modelo}</p>
+                            <p><b>Año: </b>{product.year}</p>
                         </Col>
                         <Col md={5} xs={4} lg={5} >
-                            <p><b>Precio:</b>{product.precio_aseguradora}</p>
-                            <p><b>Precio del Mercado:</b>{product.precio_mercado}</p>
+                            <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
+                            <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
                             <button>Comprar</button>
                         </Col>
                     </Row>
