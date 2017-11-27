@@ -8,11 +8,13 @@ import SignUp from './components/SignUp';
 import Sale from './components/Sale';
 import Aution from './components/Aution';
 import {connect} from 'redux-zero/react';
+import { Menu } from "./components/Home";
 
 const App = ({successLogin, user}) => {
   return (
     <BrowserRouter>
       <div>
+        <Menu />
         <Switch>
           <Route exact path="/home" render={() => <Home />}/>
           <Route exact path="/logIn" render={() => <LogIn successLogin={successLogin}/>}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/home.css';
-import { Grid, Col, Row, Navbar, Carousel, Nav, NavItem } from 'react-bootstrap';
+import { Grid, Col, Row, Navbar, Carousel, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
@@ -34,13 +34,26 @@ const NavBar = () => {
 }
 
 
-const Menu = () =>{
-    return(
-        <Nav bsStyle="pills">
-            <NavItem href="/home">NavItem 1 content</NavItem>
-            <NavItem title="Item">NavItem 2 content</NavItem>
-            <NavItem >NavItem 3 content</NavItem>
-        </Nav>
+export const Menu = () => {
+    return (
+        <Navbar inverse collapseOnSelect>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <a href="#">TAM</a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                    <NavItem eventKey={1}><NavLink to='/sales'> Ventas </NavLink></NavItem>
+                    <NavItem eventKey={2}><NavLink to='/auction'> Subasta </NavLink></NavItem>
+                </Nav>
+                <Nav pullRight>
+                    <NavItem eventKey={1}><NavLink to='/logIn'>Log In</NavLink></NavItem>
+                    <NavItem eventKey={2}><NavLink to='/signUp'>Sign Up</NavLink></NavItem>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 
@@ -48,21 +61,21 @@ const Slide = () => {
     return (
         <Carousel>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="/assets/carousel.png" />
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
                 <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="/assets/carousel.png" />
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
                 <Carousel.Caption>
                     <h3>Second slide label</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="/assets/carousel.png" />
+                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
                 <Carousel.Caption>
                     <h3>Third slide label</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -76,9 +89,7 @@ const Home = () => {
     return (
         <Grid fluid>
             <Grid>
-                <Row>
-                    <Menu />
-                </Row>
+                <Slide />
             </Grid>
         </Grid>
     )
