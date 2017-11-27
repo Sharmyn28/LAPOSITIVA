@@ -67,6 +67,14 @@ auth.onAuthStateChanged(user => {
         });
 
     }
+            database.ref('tipo').on('value', res => {
+                const productInfo = res.val();
+                console.log(productInfo)
+                store.setState({
+                    products: productInfo
+                })
+            })
+            console.log('holi', store.getState().products);
     // signOut();
 });
 
@@ -75,7 +83,6 @@ export function selectSectionAction(label) {
     store.setState({
        selectedSection: label
     });
-    
 }
 
  
