@@ -9,6 +9,7 @@ import Sale from './components/Sale';
 import Aution from './components/Aution';
 import {connect} from 'redux-zero/react';
 import { Menu } from "./components/Home";
+import Process from "./components/process";
 
 const App = ({successLogin, user, selectedSection, products}) => {
   return (
@@ -21,6 +22,7 @@ const App = ({successLogin, user, selectedSection, products}) => {
           <Route exact path="/signUp" render={() => <SignUp successLogin={successLogin}/>}/>
           <Route exact path="/sale" render={() => <Sale selectedSection={selectedSection} products={products}/>}/>
           <Route exact path="/aution" render={() => <Aution />}/>
+          <Route exact path="/process" render={() => <Process />} />
           <Route render={() => <Redirect  to={'/home'} />}/>
         </Switch>
 

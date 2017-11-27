@@ -181,6 +181,7 @@ body .progress_inner__tabs .tab {
 }
 body .progress_inner__tabs .tab h1 {
   margin: 0;
+  color: #70afd0;
 }
 body .progress_inner__tabs .tab p {
   font-weight: 400;
