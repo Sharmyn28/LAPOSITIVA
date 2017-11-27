@@ -66,7 +66,7 @@ const Out = ({ selectedSection, products }) => (
                         <Col md={5} xs={4} lg={5} >
                             <p><b>Precio: </b>S/. {product.precio_aseguradora}</p>
                             <p><b>Precio del Mercado: </b>S/. {product.precio_mercado}</p>
-                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar</i></button>
+                            <button className='btn'><i class="fa fa-shopping-cart" aria-hidden="true"> Comprar </i></button>
                         </Col>
                     </Row>
                 )

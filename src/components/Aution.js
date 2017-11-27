@@ -30,7 +30,7 @@ class Aution extends React.Component {
                     {
                         products.mecanica.map((product, index) => {
                             return (
-                                <Row key={index}>
+                                <Row key={index} className='venta'>
                                     <Col md={2} xs={4} lg={2} >
                                         <Thumbnail alt="171x180" src={product.img} />
                                     </Col>
@@ -44,6 +44,9 @@ class Aution extends React.Component {
                                         <p><b>Precio Actual: </b>S/. {product.precio_subasta}</p>
                                         <p><b>Precio Base: </b>S/. {product.precio_base}</p>
                                             <Formul index={index} add={addAution}/>
+                                        <button onClick={()=>addAution(10, index)}>+10</button>
+                                        <button onClick={()=>addAution(50, index)}>+50</button>
+                                        <button onClick={()=>addAution(100, index)}>+100</button>
                                     </Col>
                                 </Row>
                             )
