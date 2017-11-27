@@ -184,7 +184,7 @@ a:hover{
   width: 100%;
 
   padding: 1rem;
-  font-family: inherit;
+  /*font-family: inherit;*/
   font-size: 100%;
 }
 
@@ -238,7 +238,7 @@ a:hover{
   padding: 1rem 6.5rem;
 
   font-size: 100%;
-  font-family: inherit;
+  /*font-family: inherit;*/
   color: #fff;
 }
 

@@ -30,7 +30,7 @@ class Aution extends React.Component {
                     {
                         products.mecanica.map((product, index) => {
                             return (
-                                <Row key={index}>
+                                <Row key={index} className='venta'>
                                     <Col md={2} xs={4} lg={2} >
                                         <Thumbnail alt="171x180" src={product.img} />
                                     </Col>
