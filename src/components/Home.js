@@ -47,6 +47,14 @@ const Slide = () => {
     )
 }
 
+const Timmer = () => {
+    return(
+        <div>
+          timmer  
+        </div>
+    )
+}
+
 const Home = () => {
     return (
         <Grid fluid>
@@ -61,7 +69,6 @@ const Home = () => {
         </Grid>
     )
 }
-
 
 
 export default Home;
