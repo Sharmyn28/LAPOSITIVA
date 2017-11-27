@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
+import { signIn } from "../actions/actions";
 
 const LogIn = ({ successLogin }) => {
     return (
@@ -18,7 +19,8 @@ const LogIn = ({ successLogin }) => {
                 </ul>
                 <div className="tab-content">
                     <form onSubmit={(e) => {
-                        e.preventDefault;
+                        e.preventDefault();
+                        signIn(this.emailInputRef.value, this.passwordInputRef.value)
                     }}>
                         <div className="field-wrap">
                             <input type="email" required autoComplete="off" ref={e => this.emailInputRef = e} placeholder='Correo Electrónico*'/>
@@ -27,7 +29,7 @@ const LogIn = ({ successLogin }) => {
                             <input type="password" required autoComplete="off" ref={e => this.passwordInputRef = e} placeholder='Contraseña*'/>
                         </div>
                         <p className="forgot"><a>¿Olvidaste tu contraseña?</a></p>
-                        <button className="button button-block">Inicia Sesión</button>
+                        <button className="button button-block" type='submit'>Inicia Sesión</button>
                     </form>
                 </div>
             </div>

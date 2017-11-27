@@ -5,8 +5,9 @@ import { NavLink } from 'react-router-dom';
 import oferta1 from '../img/oferta1.jpg';
 import oferta2 from '../img/oferta2.jpg';
 import oferta3 from '../img/oferta3.gif';
+import { signOut } from "../actions/actions";
 
-export const Menu = () => {
+export const Menu = ({ successLogin, user }) => {
     return (
         <Navbar inverse collapseOnSelect>
             <Navbar.Header>
@@ -22,8 +23,8 @@ export const Menu = () => {
                     <NavItem><NavLink to='/process'> Proceso </NavLink></NavItem>
                 </Nav>
                 <Nav pullRight>
-                    <NavItem><NavLink to='/logIn'>Log In</NavLink></NavItem>
-                    <NavItem><NavLink to='/signUp'>Sign Up</NavLink></NavItem>
+                    <NavItem>{ successLogin == true ? <a>Bienvenido {user.name}</a> : <NavLink to='/logIn'>Log In</NavLink>}</NavItem>
+                    <NavItem>{ successLogin == true ? <a onClick={()=> signOut ()}>Sign Out</a> : <NavLink to='/signUp'>Sign Up</NavLink>}</NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/sale.css';
+//import '../styles/sale.css';
 import {selectSectionAction} from '../actions/actions';
 import {Row, Col} from 'react-bootstrap';
 
