@@ -1,0 +1,93 @@
+{
+  "tipo": {
+    "mecanica": [
+      {
+        "articulo": "Radiador Turbo Diesel Intercooler",
+        "marca": "Nissan",
+        "modelo": "Navara",
+        "year": "2012-2013",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 3500
+      },
+      {
+        "articulo": "Turbo Diesel Intercooler",
+        "marca": "Nissan",
+        "modelo": "Phatfither",
+        "year": "2014-2017",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 6000
+      }
+    ],
+    "interiores":[
+      {
+        "articulo": "Turbo Diesel Intercooler",
+        "marca": "Mitsubishi",
+        "modelo": "Lancer",
+        "year": "2008-2014",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 700
+      },
+      {
+        "articulo": "Asientos",
+        "marca": "Jeep",
+        "modelo": "Liverti",
+        "year": "2010-2012",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 1000
+      }
+    ],
+    "carroceria":[
+      {
+        "articulo": "Puerta trasera derecha",
+        "marca": "Hyundai",
+        "modelo": "Elantra",
+        "year": "2011-2016",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 800
+      },
+      {
+        "articulo": "Puerta Levadiza Trasera",
+        "marca": "Toyota",
+        "modelo": "Highlander",
+        "year": "2011-2012",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 1000
+      }
+    ],
+    "accesorio interno":[
+      {
+        "articulo": "Faro delantero derecho",
+        "marca": "Toyota",
+        "modelo": "Prado",
+        "year": "2014-2016",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 700
+      },
+      {
+        "articulo": "Espejo + Tapa + Vista lateral",
+        "marca": "Hyunday",
+        "modelo": "Tucson",
+        "year": "2014-2016",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 550
+      },
+      {
+        "articulo": "Rejilla delantera",
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "year": "2007-2013",
+        "img": "",
+        "precio_mercado": "",
+        "precio_aseguradora": 350
+      }
+    ]
+  }
+}
