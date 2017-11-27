@@ -2,44 +2,16 @@ import React from 'react';
 import '../styles/home.css';
 import { Grid, Col, Row, Navbar, Carousel, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-
-const NavBar = () => {
-    return (
-        <Col lgOffset={9} lg={3} md={3} sm={3} xs={3} className="nav">
-            <ul>
-                {/*<li>
-                    <a class="logo" href="http://andytran.me">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/logo_(1).svg" />
-                    </a>
-                </li>
-                <li>
-                    <NavLink to="/sale"> Ventas</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/auction">Subasta</NavLink>
-                </li>*/}
-                <li>
-                    <NavLink to='/logIn'>Log In</NavLink>
-                </li>
-                <li>
-                    <NavLink to='/signUp'>Sign Up</NavLink>
-                </li>
-
-                <li>
-                    <a><i className="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </Col>
-    )
-}
-
+import oferta1 from '../img/oferta1.jpg';
+import oferta2 from '../img/oferta2.jpg';
+import oferta3 from '../img/oferta3.gif';
 
 export const Menu = () => {
     return (
         <Navbar inverse collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">TAM</a>
+                    <NavLink to='/home'> TAM </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>
@@ -47,6 +19,7 @@ export const Menu = () => {
                 <Nav>
                     <NavItem><NavLink to='/sale'> Ventas </NavLink></NavItem>
                     <NavItem><NavLink to='/aution'> Subasta </NavLink></NavItem>
+                    <NavItem><NavLink to='/process'> Proceso </NavLink></NavItem>
                 </Nav>
                 <Nav pullRight>
                     <NavItem><NavLink to='/logIn'>Log In</NavLink></NavItem>
@@ -61,25 +34,13 @@ const Slide = () => {
     return (
         <Carousel>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                <img width={700} height={500} alt="900x500" src={oferta1} />    
             </Carousel.Item>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
+                <img width={700} height={500} alt="900x500" src={oferta2} />
             </Carousel.Item>
             <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
+                <img width={700} height={500} alt="900x500" src={oferta3} />
             </Carousel.Item>
         </Carousel>
     )
@@ -89,10 +50,17 @@ const Home = () => {
     return (
         <Grid fluid>
             <Grid>
-                <Slide />
+                <Row>
+                    <Col lgOffset={2} mdOffset={2} smOffset={2} xsOffset={2} xs={7} sm={7} lg={7} md={7}>
+                        <Slide />
+                    </Col>
+                </Row>
+
             </Grid>
         </Grid>
     )
 }
+
+
 
 export default Home;
