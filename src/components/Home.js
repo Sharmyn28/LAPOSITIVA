@@ -52,10 +52,10 @@ const Home = () => {
     return (
         <Grid fluid>
             <Grid>
-                <Navbar />
+                <NavBar />
             </Grid>
         </Grid>
     )
 }
 
-export default Home;
+export default NavBar;
