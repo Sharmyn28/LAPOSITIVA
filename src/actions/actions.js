@@ -85,5 +85,9 @@ export function selectSectionAction(label) {
     });
 }
 
- 
+export function addAution(price, index) {
+    console.log('new price', price);
+    console.log('ruta','tipo/mecanica/'+index+'/precio_subasta')
+    database.ref('tipo/mecanica/'+index+'/precio_subasta').set(price);
+}
 
