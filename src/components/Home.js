@@ -9,10 +9,10 @@ import { signOut } from "../actions/actions";
 
 export const Menu = ({ successLogin, user }) => {
     return (
-        <Navbar inverse collapseOnSelect id='navbar-inverse'>
+        <Navbar collapseOnSelect id='navbar-inverse'>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <NavLink to='/home'> TAM </NavLink>
+                    <NavLink to='/home'> PackParts </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>
@@ -23,8 +23,8 @@ export const Menu = ({ successLogin, user }) => {
                     <NavItem><NavLink to='/process'> Proceso </NavLink></NavItem>
                 </Nav>
                 <Nav pullRight>
-                    <NavItem>{ successLogin == true ? <a>Bienvenido {user.name}</a> : <NavLink to='/logIn'>Log In</NavLink>}</NavItem>
-                    <NavItem>{ successLogin == true ? <a onClick={()=> signOut ()}>Sign Out</a> : <NavLink to='/signUp'>Sign Up</NavLink>}</NavItem>
+                    <NavItem>{ successLogin == true ? <a>Bienvenido <span className='user'>{user.name}</span></a> : <NavLink to='/logIn'>Log In</NavLink>}</NavItem>
+                    <NavItem>{ successLogin == true ? <button className='btn' onClick={()=> signOut ()}>Sign Out</button> : <NavLink to='/signUp'>Sign Up</NavLink>}</NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
